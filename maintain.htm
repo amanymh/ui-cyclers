@@ -1,0 +1,2931 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title></title>
+<link href="css/daterangepicker-bs3.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+       <script src="Scripts/jquery-3.1.1.min.js"></script>
+<script src="Scripts/bootstrap.min.js"></script>
+<script src="Scripts/jquery.metisMenu.js"></script>
+<!-- Data picker -->
+<script src="Scripts/bootstrap-datepicker.js"></script>
+<script src="Scripts/jquery.slimscroll.min.js"></script>
+<!-- Date range picker -->
+<script src="Scripts/daterangepicker.js"></script>
+<script src="scripts/inspinia.js"></script>
+<link href="css/portalcss.css" rel="stylesheet" />
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<style>
+
+    #page-wrapper {
+        padding: 10px;
+    }
+
+    .top-navigation .wrapper.wrapper-content {
+        padding: 0px;
+    }
+
+
+    #profile-div {
+        padding-top: 18px;
+        margin-left: 35px;
+    }
+
+    .profile-image {
+         padding-left:10px;
+
+        margin-left: 28px;
+
+    }
+    .profile-image img{
+        width:90px;
+        height:90px;
+    }
+
+    .display-search {
+       margin-left: 200px;
+    margin-top: 20px;
+        padding: 3px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+    }
+
+
+
+    .profile-data {
+        text-transform: capitalize;
+    font-size: 13px;
+    padding-top: 17px;
+    background-color: white;
+    /* padding-right: 78px; */
+    padding-left: 91px;
+    }
+
+   .profile-data p {
+    margin-bottom: 1px;
+        }
+
+   .profile-data p strong {
+    font-size: 15px;
+ color:dimgrey;
+            }
+      .nav>li>a:hover{
+        background-color: #FFFFFF;
+        border-color: #FFFFFF;
+      }
+
+    .display-li > a {
+       background-color:#FFFFFF;
+        color: #4a4545;
+        padding:10px 15px;
+          font-size: 13px;
+    }
+
+    .tabs-container .nav-tabs > li > a {
+        font-weight: 600;
+        text-align: -webkit-left;
+    text-align: left;
+  padding: 7px 6px 7px 7px;
+     font-size: 13px;
+     margin-left: 2px;
+     border-right: 1px solid #dadada;
+     margin-bottom: 4px;
+       border-radius: 0px;
+    }
+
+    .top-navigation .display-tab > li a:hover, .top-navigation .display-tab > li a:focus {
+       background-color: #FFFFFF;
+        color: #4a4545;
+          font-size: 13px;
+    }
+   .top-navigation .display-tab> li.active{
+       background-color: #FFFFFF;
+   }
+    #display-tab-container .nav-tabs > li.active > a {
+       background-color:  #FFFFFF;
+        color: #3a81bf;
+       text-align: -webkit-left;
+       text-align: left;
+       border-right: 1px solid #dadada;
+         border-radius: 0px;
+        font-size: 13px;
+        margin-right: 0px;
+        border-top:none;
+      /*  border-right:none; */
+            font-weight: 600;
+        border-left:none;
+    }
+    #display-tab-container .nav-tabs > li.active{
+     border-bottom:3px solid #629dd0;
+    }
+
+    #display-tab-container {
+           border: 1px solid #d8d0d0;
+           border-radius: 3px;
+           margin-top: 30px;
+       margin-left: 39px;
+    margin-right: 39px;
+    }
+
+    .display-data-table {
+        /*font-size: 13px;
+        color: black;
+        font-weight: 700;*/
+    }
+
+    .head-data {
+        font-size: 18px;
+        color: #333;
+        font-weight: 700;
+    }
+
+    .employee-data {
+        font-size: 13px;
+        color: #333;
+    }
+
+    .tabs-container .panel-body {
+        background-color: #FFFFFF;
+        padding-bottom: 100px;
+        padding: 26px;
+            height: 600px;
+    }
+
+      .line{
+        color: #000000;
+            margin-bottom: 29px;
+      }
+
+    .btn-tab {
+       /* margin-right: 10px; */
+      /*  padding-right: 23px; */
+      /*  padding-left: 23px*/;
+         text-transform: capitalize;
+          padding-right: 21px;
+    padding-left: 21px;
+
+          background-color: #eee;
+    }
+
+    .btn-tab-next {
+       /* margin-right: 10px;
+        padding-right: 13px;*/
+       /* padding-left: 17px;   */
+         text-transform: capitalize;
+
+          background-color: #eee;
+    }
+
+    .btn-tab-prev {
+       /* margin-right: 10px;
+        padding-right: 10px;
+        padding-left: 7px;*/
+         text-transform: capitalize;
+
+        background-color: #eee;
+    }
+
+    .btn-tab-overview {
+       /* margin-right: 10px;
+        padding-right: 14px;
+        padding-left: 12px;*/
+         text-transform: capitalize;
+       background-color: #eee;
+
+    }
+
+    .tab-btn-r {
+           padding-left: 3px;
+    font-size: 10px;
+    }
+
+    .tab-btn-l {
+           padding-right: 3px;
+    font-size: 10px;
+    }
+
+    .input-group-addon {
+        text-transform: capitalize;
+    }
+    .drop-tab>.active>a, .drop-tab>.active>a:focus, .drop-tab>.active>a:hover{
+    color: #4677e6;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    outline: 0;
+    margin-left: 10px;
+    margin-right: 15px;
+   /* border-bottom: 3px solid #629dd0; */
+    }
+    .drop-tab{
+     padding-bottom: 10px;
+     padding-top: 10px;
+    }
+
+    .drop-tab>li>a{
+      margin-left: 10px;
+    margin-right: 15px;
+    padding: 6px 8px;
+    }
+
+    .display-li-drop > a, .display-li-drop > a:hover, .display-li-drop > a:focus{
+background-color: #FFFFFF;
+    }
+
+
+
+    .info-text{
+text-transform: capitalize;
+        font-size: 20px;
+      color:dimgrey;
+    }
+    .emplye-text{
+  text-transform: capitalize;
+        font-size: 17px;
+      color:#636363;
+      padding-bottom:5px;
+    }
+    .dropdown-menu>li>a{
+      font-size: 12px;
+    }
+    .textright{
+           text-align: end;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+      border-top: none;
+         padding: 3px;
+    }
+
+
+</style>
+
+
+</head>
+
+<body style="background-color: #f1f1f1;">
+
+
+
+     <div class="container-fluid">
+
+          <!--    <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="logo-contain">
+                    <div class="logo">
+                        <span class="logo-cyclers">cyclers</span>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
+                <div class="pull-right right-text">
+                    <div>
+                        <span class="cyclers-team ">cyclers team member</span>
+                        <span class="cyclers-home "><i class="glyphicon glyphicon-home home-icon"></i> my home</span>
+                    </div>
+                    <div class="kl">
+                        <span class="cyclers-team-2 ">for cyclers , egypt</span>
+                        <span class="cyclers-home-2 "><i class="glyphicon glyphicon-play play-icon"></i> change</span>
+                    </div>
+                </div>
+            </div>
+
+        </div> -->   <!-- end row -->
+
+      <div class="row" id="menu-background">
+        <div class="dropdown-container" style=" -webkit-justify-content: space-between;justify-content: space-between;padding: 3px;">
+            <div class="dropdown-container" style="margin-left:30px;" >
+
+                <div class="div-dropdown">
+                   <a href="index.html"> <span class="dropdown-text" id="drop-1">
+                   <!-- <i class="glyphicon glyphicon-chevron-right arrow-icon"></i>-->Home</span> </a>
+                    <!--<div class="contain-drop " id="contain-1">
+                        <ul class="drop-menu">
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                        </ul>
+                    </div>-->
+                </div>
+
+
+
+                <div class="div-dropdown">
+                   <a href="pdm.htm"> <span class="dropdown-text" id="drop-2">
+                   <!--<i class="glyphicon glyphicon-chevron-right  arrow-icon"></i>-->PDM</span> </a>
+                    <!--<div class="contain-drop" id="contain-2">
+                        <ul class="drop-menu">
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+
+                        </ul>
+                    </div>-->
+                </div>
+
+
+
+                <div class="div-dropdown">
+                <a href="browse.html">
+                    <span class="dropdown-text" id="drop-3" >
+                    <!--<i class="glyphicon glyphicon-chevron-right  arrow-icon"></i>-->Browse</span> </a>
+                    <!--<div class="contain-drop" id="contain-3">
+                        <ul class="drop-menu">
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                        </ul>
+                    </div>-->
+                </div>
+
+
+
+                <div class="div-dropdown">
+                <a href="employeeAction.htm">
+                    <span class="dropdown-text" id="drop-4">
+                   <!-- <i class="glyphicon glyphicon-chevron-right  arrow-icon"></i>-->Employee action</span>  </a>
+                    <!--<div class="contain-drop" id="contain-4">
+                        <ul class="drop-menu">
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                        </ul>
+                    </div>-->
+                </div>
+
+                  </div>
+                <!--<div class="" style="margin-right: 46px;margin-top: 3px;"><input type="search" placeholder="search ...." id="search-1" /></div> -->
+
+            </div>
+        </div>  <!-- end row -->
+
+        <!--<div class="row" id="div-home">
+            <div>
+                <span class="home-text"><a href="pdm.htm"></a></span>
+            </div>
+        </div>-->
+
+
+
+<div class="row">
+   <!-- <div class="col-lg-12 col-md-12">
+        <form>
+            <input type="text" placeholder="Search ..." class="display-search" />
+        </form>
+    </div>-->
+</div>
+<div class="row"id="disply-div" style="background-color: white;
+    margin: 30px 40px 0px 40px;
+    padding-bottom: 30px;border: 1px solid #d6d4d4;
+    border-radius: 3px;">
+
+
+
+
+    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+        <div class="m-b-xs" id="profile-div">
+
+            <p class="info-text">employee information</p>
+
+
+            <div class="profile-data">
+                <!--<p class="emplye-text">emplyee details</p> -->
+                <div style="display:flex; justify-content:space-between;">
+                    <div  style="color: black;font-weight:700">
+                        <p style="padding-bottom:5px;">
+                            name :
+                        </p>
+                        <p style="padding-bottom:5px;">
+                            Title :
+                        </p>
+                        <p>
+                            Division :
+                        </p>
+                    </div>
+                    <div style="font-weight:700; padding-right:72px; color: #636363">
+                        <p style="padding-bottom:5px;">
+                           Ahmed Ali
+                        </p>
+                        <p style="padding-bottom:5px;">
+                        Sr. Software Engineer
+                        </p>
+                        <p>
+                             Software Engineer
+                        </p>
+                    </div>
+                    <div style="color: black; padding-left:35px;font-weight:700">
+                        <p style="padding-bottom:5px; ">
+                            Cost :
+                        </p>
+                        <p style="padding-bottom:5px;">
+                            Center :
+                        </p>
+                        <p>
+                            Department :
+                        </p>
+                    </div>
+                    <div style=";">
+                        <p style="padding-bottom:5px;color: #636363">
+                            <span>00000001</span>
+                        </p>
+                        <p style="padding-bottom:5px;">
+                             <span>Hired</span>
+                        </p>
+                        <p>
+                           <span>Hired</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"></div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+    <div style="display: flex;">
+          <form>
+            <input type="text" placeholder="Search ..." class="display-search" />
+                </form>
+                </div>
+        <div class="profile-image">
+            <img src="img/a4.jpg" class="img-responsive"  alt="profile">
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<div class="row">
+
+    <div class="col-lg-12">
+        <div  id="display-contain">
+            <div class="tabs-container" id="display-tab-container">
+
+                    <ul class="nav nav-tabs display-tab" style="background-color: white;    padding: 8px 5px 0px 10px;">
+
+                        <li class="display-li active" style="background-color:#fbfbff;"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> Actions</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-2" aria-expanded="false" >Org Assignment</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-3" aria-expanded="false">Personal Info</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-4" aria-expanded="false">Address</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-5" aria-expanded="false">Family Dependents</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-6" aria-expanded="false">Previous  Employer</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-7" aria-expanded="false">Bank Details</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-8" aria-expanded="false">Labor Contract</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-9" aria-expanded="false">Education</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-10" aria-expanded="false">Immigration</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-11" aria-expanded="false">Occ license</a></li>
+                        <li class="display-li"><a data-toggle="tab" href="#tab-12" aria-expanded="false">Basic Pay</a></li>
+
+
+                            <li class="display-li dropdown" style="margin-left:12px; margin-top: 5px;">
+                                <span class="dropdown-toggle glyphicon glyphicon-align-justify" data-toggle="dropdown">
+
+
+                                </span>
+                                <ul class="dropdown-menu  drop-tab" style="left: -160px; margin-top: 10px;">
+                                    <li class="display-li-drop"><a data-toggle="tab" href="#tab-13" aria-expanded="false"> Attach Documents</a></li>
+                                    <li class="display-li-drop"><a data-toggle="tab" href="#tab-14" aria-expanded="false">Add Off-cycle pay</a></li>
+                                    <li class="display-li-drop"><a data-toggle="tab" href="#tab-15" aria-expanded="false">Rec Pay$Ded</a></li>
+                                    <li class="display-li-drop"><a data-toggle="tab" href="#tab-16" aria-expanded="false">Additional Payment</a></li>
+                                    <li class="display-li-drop"><a data-toggle="tab" href="#tab-17" aria-expanded="false">Dates</a></li>
+                                    <li class="display-li-drop"><a data-toggle="tab" href="#tab-18" aria-expanded="false">Awards</a></li>
+                                     <li class="display-li-drop"><a data-toggle="tab" href="#tab-19" aria-expanded="false">Work Schedule</a></li>
+                                   <!-- <li class="display-li-drop"><a data-toggle="tab" href="#tab-7" aria-expanded="false">Dependants</a></li>
+                                    <li class="display-li-drop"><a data-toggle="tab" href="#tab-8" aria-expanded="false">Contracts</a></li>
+                                    <li class="display-li-drop"><a data-toggle="tab" href="#tab-9" aria-expanded="false">Work Schedule</a></li>
+                                    <li class="display-li-drop"><a data-toggle="tab" href="#tab-10" aria-expanded="false">Education</a></li>
+                                    <li class="display-li-drop"><a data-toggle="tab" href="#tab-11" aria-expanded="false">Dependants</a></li>-->
+
+                                </ul>
+                            </li>
+
+
+
+                    </ul>
+                    <div class="tab-content ">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Personal Action</h4></td>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Organizitional Assignment</h4></td>
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Acion Type :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Employment :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Reason of Action :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Position :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Termination Reason :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Personnel Area :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"></td>
+                                        <td class=" col-md-2 employee-data" >
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	Employee Group :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                      <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"></td>
+                                        <td class=" col-md-2 employee-data" >
+                                      </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Employee Sub-Group :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                              <div class="panel-body">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Enterprise Structure</h4></td>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Personnel Structure</h4></td>
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Company Code :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Employee Group :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Personnel Areal :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	Employee Sub-Group :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	Personnel Sub-Area :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Pay Area :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Cost Center</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  </td>
+                                        <td class=" col-md-2 employee-data">
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                      <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Organizational Plan</h4></td>
+                                    </tr>
+                                       <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Job Family</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+
+                                         </div>
+                                    </tr>
+                                       <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Job Sub-Family</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Position Code</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Organization Unit</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+
+                                         </div>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane">
+                           <div class="panel-body">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Name</h4></td>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Additional Information</h4></td>
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Form of Address :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	Gender :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	First Name :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Date of Birth :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"> Last Name :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Country of Birth :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Arabic Full Name</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	Native Language</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"></td>
+                                        <td class=" col-md-2 employee-data" >
+
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> Marital Status</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style=""><span class="head-data">Disability</span></td>
+                                        <td class=" col-md-2 employee-data" >
+
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	Military Status</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Disabled</td>
+                                        <td class=" col-md-2 employee-data" >
+                                         <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">National ID</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                      <tr>
+                                        <td colspan="3" style="border-top:none;"></td>
+                                    </tr>
+                                       <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	Type of disability</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+
+                                         </div>
+                                    </tr>
+                                       <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">   </td>
+                                        <td class=" col-md-2 employee-data" >
+
+                                        </td>
+
+                                         </div>
+                                    </tr>
+
+
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-pane">
+                                             <div class="panel-body">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Communication</h4></td>
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	Address 1 :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	Private Email :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Address 2 :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Business Email :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"> Postal Code :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	Private Phone :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	City</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  Private Cell</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Country</td>
+                                        <td class=" col-md-2 employee-data" >
+                                          <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Others</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+                                      <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Emergency Contact</h4></td>
+                                    </tr>
+                                       <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	Name</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+
+                                         </div>
+                                    </tr>
+                                       <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Relationship</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+
+                                         </div>
+                                    </tr>
+                                      <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Phone</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	Email</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+
+                                         </div>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-5" class="tab-pane">
+                              <div class="panel-body">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style=" padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	Family Member/Dependents</h4></td>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td>
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Family Member :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	House No. & Street :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Last Name :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	City “village?” :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">First Name :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	Country :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/></td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	Relationship</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  </td>
+                                        <td class=" col-md-2 employee-data">
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                      <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	Gender</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                      </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"></td>
+                                        <td class=" col-md-2 employee-data">
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Nationality</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                      </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"></td>
+                                        <td class=" col-md-2 employee-data">
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-6" class="tab-pane">
+                                       <div class="panel-body">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+                                             <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	Previous Employer</h4></td>
+                                        <!--<td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td> -->
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	Employer :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> Country : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Start Date :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	Job Title :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">	End Date :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> Industry : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">   Location :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	Functional Area : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control "/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-7" class="tab-pane">
+                            <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	Bank Details</h4></td>
+                                        <!--<td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td> -->
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">  Bank Name:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> Bank Key : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Bank Country :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">Account No :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">  	Branch Name :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> Currency : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <div id="tab-8" class="tab-pane">
+                            <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	Periods</h4></td>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	Contract Regulation</h4></td>
+
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Probation Period :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  	Current Contract Type	 </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">Ending :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	</td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"> 	From: </td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"> To:  </td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <div id="tab-9" class="tab-pane">
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	Education</h4></td>
+                                        <!--<td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td> -->
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"> 	Education Institution:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	Education Type : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">	Start Date :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	Subject :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   	End Date :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	Field of Education : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   Country :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	Highest : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   Location:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  	Education Levelt : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                      <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;"> 	Grade:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- 10 -->
+                                    <div id="tab-10" class="tab-pane">
+
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Basic Data</h4></td>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Visa Data</h4></td>
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"> 	Name in Passport:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  	Visa No : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">		Passport No. :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">		Designation :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   		Passport County :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  	Duration : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">  Passport Issue Place :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	Residence Permit No. : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">  Passport Expiration Date:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  	Sponsor : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                            <!-- 11 -->
+                                          <div id="tab-11" class="tab-pane">
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	License Details</h4></td>
+                                        <!--<td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td> -->
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">  	License Type:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	Expiration Date : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;"> License Name :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	Issue Institute :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">    Issue Date :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 		Entity Country : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- 12 -->
+                                       <div id="tab-12" class="tab-pane">
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Pay Scale</h4></td>
+                                       <td colspan="3" style="border-top:none;"><h4 class="head-data">	Wage Details</h4></td>
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">   	Reason:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 		Wage Type Code : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">		Pay Scale Type :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  Wage T Description :</td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">     Pay Scale Area:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  	 Amount : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">  	Pay Scale Group :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 		Currency : </td>
+                                        <td class=" col-md-2 employee-data">
+                                        <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   	Grade:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  	 </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                      <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;"> 		Pay Period:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                      <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;"> 	 	Monthly Salary:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- 13 -->
+                                    <div id="tab-13" class="tab-pane">
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	Attach Documents</h4></td>
+                                        <!--<td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td> -->
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">  Document Title:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	 </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;"> 	Attachment Type :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	</td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">     File :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">   </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- 14 -->
+                                    <div id="tab-14" class="tab-pane">
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	Additional Off-cycle Payment </h4></td>
+                                        <!--<td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td> -->
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">  	Wage Type:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	 </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">	Wage Type :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  :</td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   		Currency :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	 </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   	Date of Payment :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	 </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- 15 -->
+                                    <div id="tab-15" class="tab-pane">
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">Recurring Payments & Deductions </h4></td>
+                                        <!--<td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td> -->
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">   	Wage Type:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	 </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">		Amount :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	</td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   		Currency :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">   </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   	Reason for Change :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	 </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- 16 -->
+                                    <div id="tab-16" class="tab-pane">
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	Additional Payment </h4></td>
+                                        <!--<td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td> -->
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"> 		Wage Type:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">   </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">		Amount :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	</td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">     	Currency :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	</td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   	Date of Payment:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- 17 -->
+                                    <div id="tab-17" class="tab-pane">
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">		Important Dates</h4></td>
+                                        <!--<td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td> -->
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">   	Date Type:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	 </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">		Date :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	</td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">     	Repeat the above 10 times :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	 </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <!--18  -->
+                                    <div id="tab-18" class="tab-pane">
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">		Awards</h4></td>
+                                        <!--<td colspan="3" style="border-top:none;"><h4 class="head-data">Address</h4></td> -->
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;">   Award Type:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	 </td>
+                                        <td class=" col-md-2 employee-data">
+                                         </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;"> 	Target Bonus :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">	</td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">     	Currency:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data"> 	 </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   	Percentage:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">   </td>
+                                        <td class=" col-md-2 employee-data">
+
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- 19 -->
+                                       <div id="tab-19" class="tab-pane">
+                               <div class="panel-body" style="padding-bottom: 50px;">
+                                <table class="table small m-b-xs">
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;">
+                                            <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 7px;">Range select :</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <span class="input-group-addon">from</span>
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td colspan="3" style="border-top:none;">
+                                        <div style="display: flex;">
+                                             <div class="form-group" id="data_5" style="display: flex;">
+                                                <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed on:</label>
+                                                <div class="input-daterange input-group" id="datepicker">
+
+                                                    <input type="text" class="input-sm form-control" name="start" />
+
+                                                </div>
+
+                                            </div>
+                                              <div style="display: flex;    padding-left: 10px;">
+                                               <label class="font-normal" style="padding-right: 10px; padding-top: 6px;">changed by:</label>
+                                                <div><input type="text" class="input-sm form-control" value=" Direct manager" />  </div>
+                                              </div>
+                                            </div>
+
+                                        </td >
+                                            <td colspan="" style="border-top:none;">
+
+                                            </td>
+
+                                    </tr>
+                                    <tr>
+                                      <td colspan="4" style="border-top:none;">
+                                            <button class="btn btn-default btn-sm btn-tab-prev"><i class="glyphicon glyphicon-menu-left tab-btn-l"></i>Backward</button>
+                                            <button class="btn btn-default btn-sm btn-tab-next">Forward<i class="glyphicon glyphicon-menu-right tab-btn-r"></i></button>
+                                            <button class="btn btn-default btn-sm btn-tab-overview">overview</button>
+
+                                            <button class="btn btn-default btn-sm btn-tab" style="padding-left: 21px;  padding-right: 21px;">Save</button>
+                                            <button class="btn btn-default btn-sm btn-tab">Delete</button>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	 Work Schedule Rule</h4></td>
+                                        <td colspan="3" style="border-top:none;"><h4 class="head-data">	Working Time</h4></td>
+                                    </tr>
+                                    <tr >
+                                         <div class="row" >
+                                        <td class=" col-md-2 display-data-table" style="padding-top: 14px;"> Work Schedule Rule:</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  	Daily Working Hrs.	 </td>
+                                        <td class=" col-md-2 employee-data">
+                                          <input type="text" class=" input-sm form-control"/>
+                                         </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                         <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;"> 	Part-Time Employee :</td>
+                                        <td class=" col-md-2 employee-data" >
+                                        <input type="text" class=" input-sm form-control"/></td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  Weekly Working Hrs.	</td>
+                                        <td class=" col-md-2 employee-data">
+                                           <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">   </td>
+                                        <td class=" col-md-2 employee-data" >
+                                       </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">  Monthly Working Hrs.	 </td>
+                                        <td class=" col-md-2 employee-data">
+                                           <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+                                     <tr>
+                                        <div class="row" >
+                                        <td class=" col-md-2 " style="padding-top: 14px;">     </td>
+                                        <td class=" col-md-2 employee-data" >
+                                       </td>
+                                         <td class=" col-md-2"></td>
+                                        <td class="  col-md-2 employee-data">   Weekly Workdays.	 </td>
+                                        <td class=" col-md-2 employee-data">
+                                            <input type="text" class=" input-sm form-control"/>
+                                        </td>
+                                         <td  class=" col-md-2"></td>
+                                         </div>
+                                    </tr>
+
+
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- end tab -->
+
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+</div>
+
+    </div>
+</body>
+
+</html>

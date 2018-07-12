@@ -1,0 +1,356 @@
+
+                                /*browse css*/
+ .sidenav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+   right: 0;
+/*   padding-left: 14px;   */
+     border: 1px solid #d0cece;
+    background-color:  #FFFFFF;
+    overflow-x: hidden;
+    transition: 0.7s;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 45px;
+    font-size: 36px;
+    margin-right: 20px;
+}
+    .open-sidebar{
+    width: 300px;
+                  /* now */
+    }
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#sidebar-img{
+      border: 1px solid gray;
+    max-width: 122px;
+    border-radius: 2px;
+    padding: 2px;
+
+}
+
+.group-btn{                /* now */
+     display:flex;
+    display:-webkit-flex;
+    justify-content:space-between;
+}
+.side-main{
+
+  margin-right:300px;
+                                     /* now */
+}
+.main{
+  transition: margin-right .7s;          /* nows */
+}
+  .tab-icon-browse{
+ margin-left: 8px;        /* now */
+  }
+  .dots-text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+/*  max-width:0px; */             /* now */
+  }
+
+  .highlight{
+   background-color: #659fd0;
+        color: white;
+  }
+
+.employee-info{
+ margin-left:10px;
+    margin-right:10px;
+}
+
+.info-basket{
+    display:flex;
+    display:-webkit-flex;
+}
+.clear-column{
+   
+    margin-right:10px;
+}
+.add-basket-icon{
+       padding-left: 6px;
+    padding-right: 3px;
+    color: dimgrey;
+}
+.add-basket-icon-plus{
+    padding-left: 3px;
+    color: dimgrey;
+    font-size: 10px;
+}
+.button-btn{
+    border-radius:4px;
+    background:-webkit-linear-gradient(top,#fff 0,#e0dede 89%,#dcdbdb 100%);
+    padding:3px 5px;
+    font-family:'Lato';
+    font-size:13px;
+}
+.full-size-icon{
+     padding-left: 6px;
+    padding-right: 3px;
+    color: dimgrey;
+    font-size:12px;
+}
+
+ .nav-tabs.tabs-container>li>a{
+  color:  #555555;
+  font-size: 15px;
+}
+.nav-tabs.tabs-container>li.active>a{
+ color: #3683C5;
+ font-size: 15px;
+  border : none;
+}
+ .nav-tabs.tabs-container>li{
+   border: 1px solid #e6e3e3;
+    border-radius: 4px;
+    margin-right: 2px;
+}
+
+
+.nav-tabs.tabs-container>li.active>a, .nav-tabs.tabs-container>li.active>a:focus, .nav-tabs.tabs-container>li.active>a:hover{
+   color: #3683C5;
+   border:none;
+
+}
+ .dr-menu>li>a{
+   font-size: 12px;
+ }
+.sidebar-tab-content>p{
+     margin-bottom: 3px;
+}
+
+
+
+
+                                         /*sidebar*/
+
+#div-photo-sidebar{
+   margin: 7px;
+
+}
+
+
+#open-button{
+    padding: 5px;
+     border-radius: 5px;
+     margin-right: 5px;
+      text-decoration: none;
+      cursor: pointer;
+}
+
+
+ .div-info-sidebar{
+      padding-left: 74px;
+
+    padding-top: 9px;
+ }
+ .department-sidebar{
+ font-size: 11px;
+    text-transform: capitalize;
+     color: #000000;
+    margin-bottom: 3px;
+}
+.code-sidebar{
+   font-size: 11px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 4px;
+}
+.postion-sidebar{
+   font-size: 11px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 4px;
+}
+.name-sidebar{
+  font-size: 13px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 4px;
+       font-weight: 600;
+}
+.job-sidebar{
+  font-size: 11px;
+    text-transform: capitalize;
+     color: #000000;
+     margin-bottom: 4px;
+}
+.code-no{
+      font-size: 11px;
+      text-transform: capitalize;
+      color: #000000;
+
+          padding-right: 10px;
+ }
+#sidebar-tab{
+    padding-top: 11px;
+
+}
+.tab-head-info{
+    font-size: 11px;
+      text-transform: capitalize;
+      color: #000000;
+      font-weight: bold;
+
+}
+
+.sidebar-tab-content{
+ padding-left: 6px;
+ padding-top: 11px;
+}
+
+.sidebar-icon{
+  padding-right: 5px;
+  color: #000000;
+  font-size: 9px;
+  font-weight: bold;
+}
+.sidebar-tab-content-info{
+    font-size: 12px;
+      text-transform: capitalize;
+      color: #1F1F1F;
+       font-weight: 700;
+       padding-right: 5px;
+ }
+.sidebar-personal-info{
+    font-size: 11px;
+      text-transform: capitalize;
+      color: #1F1F1F;
+
+ }
+.envelop-icon{
+  padding-right: 11px;
+  color: #333;
+  font-size: 10px;
+
+  font-weight: bold;
+}
+.side-icon{
+  padding-right: 11px;
+  color: #333;
+  font-size: 11px;
+
+  font-weight: bold;
+}
+.email{
+    font-size: 11px;
+      text-transform: capitalize;
+      color: #1F1F1F;
+       font-weight: 600;
+       margin-bottom: 2px;
+ }
+
+
+
+ #sidebar-tab>li.active>a {
+   background-color: #e8e2e2;
+
+ }
+ #sidebar-tab>li.active>a, #sidebar-tab>li.active>a:focus, #sidebar-tab>li.active>a:hover{
+     background-color: #e4e1e1;
+     border: 1px solid #d2d2d2;
+ }
+#sidebar-tab>li>a {
+  background-color: #f5f5f5;
+  border: 1px solid #d2d2d2;
+ }
+#sidebar-tab>li>a{
+    padding:0px 4px;
+}
+.email-info{
+    display:flex;
+    display: -webkit-flex;
+
+}
+
+                                        /* employee action */
+
+
+
+    #Actions_tbl tbody tr.highlight td {
+        background-color: #659fd0;
+        color: white;
+    }
+    .Excute-btn {
+       border-radius: 4px !important;
+    background: -webkit-linear-gradient(top,#fff 0,#e0dede 89%,#dcdbdb 100%) !important;
+    padding: 3px 30px !important;
+
+    font-size: 16px !important;
+    margin-right: 55px !important;
+}
+.table-personal-action{
+    max-width:80%;
+    border: 1px solid #ddd;
+    border-radius:3px;
+}
+.table-personal-action>tbody>tr>td{
+    padding:5px;
+}
+.personal-text{
+   font-size: 21px;
+    color: #7288c7;
+    text-transform: uppercase;
+
+    padding: 13px 0px 10px 40px;
+}
+.user-text{
+    font-size: 15px;
+    color: #333;
+    padding: 3px 4px 6px 99px;
+    text-transform: capitalize;
+
+}
+input[type=text] {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 2px 0px 0px 5px;
+    background-color: white;
+}
+
+
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         

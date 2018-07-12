@@ -1,0 +1,599 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+ <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/inspinia.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link  href="css/bootstrap-theme.min.css" />
+
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Toastr style -->
+    <link href="css/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="css/jquery.gritter.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <title>Cyslers</title>
+    <link href="css/portalcss.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+  <title></title>
+
+
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<!-- Data picker -->
+<script src="Scripts/bootstrap-datepicker.js"></script>
+  <link href="css/style.css"  rel="stylesheet"/>
+
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.1/css/select.dataTables.min.css" />
+    <link href="css/datatables.min.css"  rel="stylesheet"/>
+<link href="Scripts/datepicker3.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/css.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+ <style>
+
+    #page-wrapper {
+        padding: 10px;
+    }
+
+    .top-navigation .wrapper.wrapper-content {
+        padding: 0px;
+    }
+
+
+    #profile-div {
+        padding-top: 11px;
+       /* margin-left: 35px;  */
+    }
+
+    .profile-image {
+         padding-left:10px;
+
+        margin-left: 6px;
+
+    }
+    .profile-image img{
+        width:90px;
+        height:90px;
+    }
+
+    .display-search {
+       margin-left: 200px;
+    margin-top: 20px;
+        padding: 3px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+    }
+
+
+
+    .profile-data {
+        text-transform: capitalize;
+    font-size: 13px;
+   /*  margin-right: 111px;
+    padding-top: 17px;*/
+    background-color: white;
+    /* padding-right: 78px; */
+
+    }
+
+   .profile-data p {
+    margin-bottom: 1px;
+        }
+
+   .profile-data p strong {
+    font-size: 15px;
+ color:dimgrey;
+            }
+
+    .display-li > a {
+       background-color:#fbfbff;
+        color: #4a4545;
+        padding:10px 15px;
+          font-size: 13px;
+    }
+
+    .tabs-container .nav-tabs > li > a {
+
+        text-align: -webkit-left;
+    text-align: left;
+  padding: 7px 6px 7px 7px;
+     font-size: 13px;
+     margin-left: 2px;
+    }
+
+    .top-navigation .display-tab > li a:hover, .top-navigation .display-tab > li a:focus {
+       background-color: #fbfbff;
+        color: #4a4545;
+          font-size: 13px;
+    }
+   .top-navigation .display-tab> li.active{
+       background-color: #fbfbff;
+   }
+    #display-tab-container .nav-tabs > li.active > a {
+       background-color: #fbfbff;
+        color: #000000;
+       text-align: -webkit-left;
+       text-align: left;
+        border-bottom:3px solid #629dd0;
+        font-size: 13px;
+        margin-right: 0px;
+        border-top:none;
+        border-right:none;
+        border-left:none;
+    }
+
+    #display-tab-container {
+        padding-top: 23px;
+        margin-left: 8px;
+    }
+
+    .display-data-table {
+        /*font-size: 13px;
+        color: black;
+        font-weight: 700;*/
+    }
+
+    .head-data {
+        font-size: 18px;
+        color: #333;
+        font-weight: 700;
+    }
+
+    .employee-data {
+        font-size: 13px;
+        color: #333;
+    }
+
+    .tabs-container .panel-body {
+        background-color: #fbfbff;
+        padding-bottom: 0px;
+
+    }
+
+      .line{
+        color: #000000;
+            margin-bottom: 29px;
+      }
+
+    .btn-tab {
+       /* margin-right: 10px; */
+      /*  padding-right: 23px; */
+      /*  padding-left: 23px*/;
+         text-transform: capitalize;
+          padding-right: 21px;
+    padding-left: 21px;
+
+          background-color: #eee;
+    }
+
+    .btn-tab-next {
+       /* margin-right: 10px;
+        padding-right: 13px;*/
+       /* padding-left: 17px;   */
+         text-transform: capitalize;
+
+          background-color: #eee;
+    }
+
+    .btn-tab-prev {
+       /* margin-right: 10px;
+        padding-right: 10px;
+        padding-left: 7px;*/
+         text-transform: capitalize;
+
+        background-color: #eee;
+    }
+
+    .btn-tab-overview {
+       /* margin-right: 10px;
+        padding-right: 14px;
+        padding-left: 12px;*/
+         text-transform: capitalize;
+       background-color: #eee;
+
+    }
+
+    .tab-btn-r {
+           padding-left: 3px;
+    font-size: 10px;
+    }
+
+    .tab-btn-l {
+           padding-right: 3px;
+    font-size: 10px;
+    }
+
+    .input-group-addon {
+        text-transform: capitalize;
+    }
+    .drop-tab>.active>a, .drop-tab>.active>a:focus, .drop-tab>.active>a:hover{
+    color: #555;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    outline: 0;
+    margin-left: 10px;
+    margin-right: 15px;
+    border-bottom: 3px solid #629dd0;
+    }
+    .drop-tab{
+     padding-bottom: 10px;
+     padding-top: 10px;
+    }
+
+    .drop-tab>li>a{
+      margin-left: 10px;
+    margin-right: 15px;
+    padding: 6px 8px;
+    }
+
+    .display-li-drop > a, .display-li-drop > a:hover, .display-li-drop > a:focus{
+background-color: white;
+    }
+
+
+
+    .info-text{
+text-transform: capitalize;
+        font-size: 20px;
+        margin-left: 23px;
+      color:#337ab7;
+    }
+    .emplye-text{
+  text-transform: capitalize;
+        font-size: 17px;
+      color:#636363;
+      padding-bottom:5px;
+    }
+    .dropdown-menu>li>a{
+      font-size: 12px;
+    }
+    .textright{
+           text-align: end;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+      border-top: none;
+         padding: 3px;
+    }
+
+
+</style>
+
+
+</head>
+
+<body style="background-color: #f1f1f1;">
+  <div class="container-fluid">
+            <div class="row" style="background-color: #FFFFFF">
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="logo-contain">
+                    <div class="logo">
+                        <span class="logo-cyclers">cyclers</span>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
+                <div class="pull-right right-text">
+                    <div>
+                        <span class="cyclers-team ">cyclers team member</span>
+                        <span class="cyclers-home "><i class="glyphicon glyphicon-home home-icon"></i> my home</span>
+                    </div>
+                    <div class="kl">
+                        <span class="cyclers-team-2 ">for cyclers , egypt</span>
+                        <span class="cyclers-home-2 "><i class="glyphicon glyphicon-play play-icon"></i> change</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>    <!-- end row -->
+
+         <div class="row" id="menu-background">
+        <div class="dropdown-container" style=" -webkit-justify-content: space-between;justify-content: space-between;">
+            <div class="dropdown-container" style="margin-left:30px;" >
+
+                <div class="div-dropdown">
+                   <a href="index.html"> <span class="dropdown-text" id="drop-1">
+                    <!--<i class="glyphicon glyphicon-chevron-right arrow-icon"></i>-->Home</span> </a>
+                    <!--<div class="contain-drop " id="contain-1">
+                        <ul class="drop-menu">
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                        </ul>
+                    </div>-->
+                </div>
+
+
+
+                <div class="div-dropdown">
+                   <a href="browse.html"> <span class="dropdown-text" id="drop-2">
+                   <!--<i class="glyphicon glyphicon-chevron-right  arrow-icon"></i>-->Browse</span> </a>
+                    <!--<div class="contain-drop" id="contain-2">
+                        <ul class="drop-menu">
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+
+                        </ul>
+                    </div>-->
+                </div>
+
+
+
+                <div class="div-dropdown">
+                <a href="display.htm">
+                    <span class="dropdown-text" id="drop-3" >
+                    <!--<i class="glyphicon glyphicon-chevron-right  arrow-icon"></i>-->Display</span> </a>
+                    <!--<div class="contain-drop" id="contain-3">
+                        <ul class="drop-menu">
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                        </ul>
+                    </div>-->
+                </div>
+
+
+
+                <div class="div-dropdown">
+                <a href="employeeAction.htm">
+                    <span class="dropdown-text" id="drop-4">
+                    <!--<i class="glyphicon glyphicon-chevron-right  arrow-icon"></i>-->Employee action</span>  </a>
+                    <!--<div class="contain-drop" id="contain-4">
+                        <ul class="drop-menu">
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                            <li><i class="glyphicon glyphicon-menu-right arrow-icon-3"></i><a>item</a></li>
+                        </ul>
+                    </div>-->
+                </div>
+
+                  </div>
+                <div class="" style="margin-right: 46px;margin-top: 3px;"><input type="search" placeholder="search ...." id="search-1" /></div>
+
+            </div>
+        </div>   <!-- end row -->
+
+        <!--<div class="row" id="div-home">
+            <div>
+                <span class="home-text"><a href="pdm.htm"></a></span>
+            </div>
+        </div>  -->   <!-- end  -->
+
+        <div class="row"id="disply-div" style="background-color: white;
+    margin-right: 120px;
+    margin-left: 120px;
+    margin-top: 30px;
+    padding-bottom: 9px;
+    border-radius: 4px;
+    margin-bottom: 20px;">
+
+
+
+     <!-- <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"> </div>   -->
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+        <div class="m-b-xs" id="profile-div">
+
+            <p class="info-text" style="">Basic</p>
+
+
+            <div class="profile-data">
+                <!--<p class="emplye-text">emplyee details</p> -->
+                <div style="display:flex;    margin-left: 139px;" class="form-group">
+                    <div  style="color: black;font-weight:700">
+                        <p style="padding-bottom:5px;text-align: right;
+    text-align: -webkit-right;">
+                           <label for="name" style="padding: 4px;"> ID : </label>
+                        </p>
+                        <p style="padding-bottom:5px;text-align: right;
+    text-align: -webkit-right;">
+                            <label for="name" style="padding: 4px;"> Status :    </label>
+                        </p>
+                        <p style="text-align: right;
+    text-align: -webkit-right;">
+                          <label for="name" style="padding: 4px;">  Company Code :    </label>
+                        </p>
+                    </div>
+                    <div style="font-weight:700; padding-right: 43px; color: #636363">
+                        <p style="padding-bottom:5px;">
+                          <input class="form-control input-sm" name="name" type="text" value="  " />
+                        </p>
+                        <p style="padding-bottom:5px;">
+                       <input class="form-control input-sm" name="name" type="text" value=" " />
+                        </p>
+                        <p>
+                           <input class="form-control input-sm" name="name" type="text" value=" " />
+                        </p>
+                    </div>
+                    <div style="color: black; padding-left:35px;font-weight:700">
+                        <p style="padding-bottom:5px; text-align: right;
+    text-align: -webkit-right;">
+                           <label for="name" style="padding: 4px;">    Country :   </label>
+                        </p>
+                        <p style="padding-bottom:5px;text-align: right;
+    text-align: -webkit-right;">
+                            <label for="name" style="padding: 4px;">   As of :   </label>
+                        </p>
+                        <p>
+
+                        </p>
+                    </div>
+                    <div style=";">
+                        <p style="padding-bottom:5px;color: #636363">
+                             <input class="form-control input-sm" name="name" type="text" value=" " />
+                        </p>
+                        <p style="padding-bottom:5px;">
+                              <input class="form-control input-sm" name="name" type="text" value=" " />
+                        </p>
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+   <!-- <div style="display: flex;">
+          <form>
+            <input type="text" placeholder="Search ..." class="display-search" />
+                </form>
+        <!--        </div>-->
+        <div class="profile-image" style="background-color: #FFFFFF">
+           <a href="advanced search.htm" class="btn btn-primary" style="margin-left: 34px;
+    margin-top: 126px;
+
+    padding-left: 27px;
+    padding-right: 27px;
+;">Run</a>
+        </div>
+
+    </div>
+
+      <div class="col-sm-1 col-md-1"></div>
+
+</div>
+
+
+                <div class="ibox float-e-margins" style=" margin: 4px 120px 30px 120px;">
+
+                    <div class="ibox-content" style="padding-top:25px; border: none;border-radius: 4px; ">
+                    <div style="display: flex; justify-content: space-between;background-color: #b1aeae;padding: 5px;">
+                    <div style="    margin-top: 10px;
+    font-size: 15px;
+    margin-left: 20px;
+}"><span style="    font-weight: 600; color: #FFFFFF">Saved Quary(1)</span></div>
+                    <div style="margin-right: 20px;
+    margin-top: 5px;">
+                    <button type="button" class="btn btn-default btn-sm">Modify</button>
+                    <button type="button" class="btn btn-default btn-sm">Delete</button>
+                    <button type="button" class="btn btn-primary btn-sm" style="    padding: 4px 18px;">Run</button>
+
+                    </div>
+                    </div>
+                        <center>
+                            <table class="table table-condensed table-bordered table-hover no-margins table-personal-action" id="Actions_tbl">
+                                <thead>
+                                    <tr>
+
+                                        <th>Description</th>
+                                        <th>Created By</th>
+                                        <th>Category</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                        <tr>
+
+                                            <td>1</td>
+                                            <td>New Hire</td>
+                                            <td>New Hire</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>2</td>
+                                            <td>Rehire</td>
+                                            <td>Rehire</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>3</td>
+                                            <td>Separation</td>
+                                            <td>Separation</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>4</td>
+                                            <td>Reassignment</td>
+                                            <td>Reassignment</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>5</td>
+                                            <td>Role Change</td>
+                                            <td>Role Change</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>6</td>
+                                            <td>Salary Change</td>
+                                            <td>Salary Change</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>7</td>
+                                            <td>Employment Change</td>
+                                            <td>Employment Change</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>8</td>
+                                            <td>Time Change</td>
+                                            <td>Time Change</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>9</td>
+                                            <td>Leave of Absence</td>
+                                            <td>Leave of Absence</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>10</td>
+                                            <td>Return of Leave</td>
+                                            <td>Return of Leave</td>
+                                        </tr>
+
+
+                                </tbody>
+                            </table>
+                        </center>
+                    </div>
+                </div>
+
+</div>   <!-- end container -->
+</body>
+
+</html>
